@@ -1,0 +1,29 @@
+# Xcode
+build/
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.xcarchive
+
+# Swift
+.build/
+*.swiftpm/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Distribution
+*.dist
+.dist/
+
+# IDEs
+.vscode/
+.idea/
+
+# Dependencies
+.swiftpm/xcode/
