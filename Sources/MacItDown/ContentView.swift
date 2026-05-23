@@ -77,7 +77,7 @@ extension ContentView {
                 }
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("MarkItDown")
+                    Text("MacItDown")
                         .font(.headline)
                     Text(statusText)
                         .font(.caption)
@@ -401,4 +401,3 @@ extension ContentView {
         }
     }
 }
-

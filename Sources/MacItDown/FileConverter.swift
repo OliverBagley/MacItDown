@@ -40,7 +40,7 @@ struct FileConverter {
 
         process.arguments = [
             "-m",
-            "markitdown",
+            "MacItDown",
             url.path
         ]
 

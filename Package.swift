@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "MarkItDownApp",
+    name: "MacItDown",
     platforms: [
         .macOS(.v15)
     ],
     products: [
         .executable(
-            name: "MarkItDownApp",
-            targets: ["MarkItDownApp"]
+            name: "MacItDown",
+            targets: ["MacItDown"]
         )
     ],
     targets: [
         .executableTarget(
-            name: "MarkItDownApp",
-            path: "Sources/MarkItDownApp",
+            name: "MacItDown",
+            path: "Sources/MacItDown",
             resources: [
                 .process("../../Resources")
             ],

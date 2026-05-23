@@ -1,1 +1,1 @@
-open dist/MarkItDownApp.app
+open dist/MacItDown.app

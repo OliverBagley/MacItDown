@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct MarkItDownApp: App {
+struct MacItDown: App {
 
     @AppStorage("selectedTheme")
     private var selectedTheme = AppTheme.system.rawValue
