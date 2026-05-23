@@ -7,6 +7,13 @@ BUILD_DIR=".build/release"
 APP_DIR="dist/${APP_NAME}.app"
 
 echo "Building Swift package..."
+# Clean stale build artifacts to avoid cached module path conflicts.
+if [ -d ".build" ]; then
+   echo "Removing old .build artifacts..."
+   chmod -R u+w .build 2>/dev/null || true
+   rm -rf .build 2>/dev/null || true
+   swift package clean >/dev/null 2>&1 || true
+fi
 swift build -c release
 
 echo "Creating app bundle..."

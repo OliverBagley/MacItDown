@@ -1,114 +1,192 @@
-# MacItDown
+<div align="center">
+  <img src=".github/images/MacItDown_icon.avif" alt="MacItDown" width="128">
+  
+  # MacItDown
+  
+  **A beautiful, modern macOS app for converting documents to Markdown**
+  
+  Built with SwiftUI following Apple's Liquid Glass design principles. Powered by [Microsoft's MarkItDown](https://github.com/microsoft/markitdown).
+  
+  ![macOS](https://img.shields.io/badge/macOS-15+-blue?style=flat-square)
+  ![Swift](https://img.shields.io/badge/Swift-6.0+-orange?style=flat-square)
+  ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+  ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+</div>
 
-A beautiful, modern macOS app for converting documents to Markdown using Microsoft's MarkItDown. Built with SwiftUI following Apple's Liquid Glass design principles.
+## 📸 Screenshot
 
-![MacItDown](https://img.shields.io/badge/macOS-15+-blue)
-![Swift](https://img.shields.io/badge/Swift-6.0+-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
+<div align="center">
+  <img src=".github/images/screenshot-main.avif" alt="MacItDown App Screenshot" width="600">
+</div>
 
 ## ✨ Features
 
-- **Drag & Drop Interface** - Simply drag files onto the app window
-- **File Picker** - Click "Open" to browse and select files
-- **Live Preview** - Toggle between rendered Markdown and source code
-- **Theme Support** - System, Light, and Dark mode with smooth transitions
-- **Copy & Save** - Copy converted Markdown to clipboard or save to file
-- **Modern UI** - Following macOS 15 design guidelines with Liquid Glass aesthetics
-- **Bundled Python** - No external Python installation required
+- **🎯 Drag & Drop Interface** - Simply drag files onto the app window
+- **📁 File Picker** - Click "Open" to browse and select files  
+- **👁️ Live Preview** - Toggle between rendered Markdown and source code
+- **🎨 Theme Support** - System, Light, and Dark mode with smooth transitions
+- **📋 Copy & Save** - Copy converted Markdown to clipboard or save to file
+- **✨ Modern UI** - Following macOS 15 design guidelines with Liquid Glass aesthetics
+- **🐍 Bundled Python** - No external Python installation required
 
-## 📋 Supported Formats
+## � Supported Formats
 
-- **PDF** documents
-- **Microsoft Office** (Word, Excel, PowerPoint)
-- **OpenOffice/LibreOffice** documents
-- **HTML** pages
-- **JSON** files
-- **CSV** spreadsheets
-- **RTF** documents
-- **Plain text** files
-- And more...
+| Format | Support |
+|--------|---------|
+| **PDF** | ✅ |
+| **Microsoft Office** (Word, Excel, PowerPoint) | ✅ |
+| **OpenOffice/LibreOffice** | ✅ |
+| **HTML** | ✅ |
+| **JSON** | ✅ |
+| **CSV** | ✅ |
+| **RTF** | ✅ |
+| **Plain Text** | ✅ |
+| And more... | ✅ |
 
-## 🚀 Requirements
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 - **macOS 15.0+**
 - **Swift 6.0+**
 - **Xcode 16+**
 
-## 🛠️ Building
+### Installation
 
-### Prerequisites
-
-1. **Install MarkItDown Python package:**
+1. **Clone the repository:**
    ```bash
-   pip3 install markitdown
+   git clone https://github.com/yourusername/MacItDown.git
+   cd MacItDown
    ```
 
-2. **Create Python virtual environment:**
+2. **Install dependencies:**
    ```bash
    python3 -m venv python-env
    source python-env/bin/activate
    pip install markitdown
    ```
 
-### Build the App
-
-```bash
-# Clone or navigate to the project directory
-cd MacItDown
-
-# Build the Swift package
-./build.sh
-
-# Or build manually
-swift build -c release
-```
+3. **Build the app:**
+   ```bash
+   ./build.sh
+   ```
+   
+   Or manually:
+   ```bash
+   swift build -c release
+   ```
 
 The built app will be available at `dist/MacItDownApp.app`.
 
-## 📖 Usage
+## 📖 Usage Guide
+
+### Basic Workflow
 
 1. **Launch** the MacItDown app
 2. **Drop a file** onto the drop zone, or click **"Open"** to select a file
 3. **Wait** for conversion to complete
 4. **Preview** the rendered Markdown or switch to **"Source"** view
-5. **Copy** the Markdown to clipboard or **Save** it to a file
+5. **Copy** to clipboard or **Save** to file
 6. **Start over** with the **"New"** button
 
 ### Keyboard Shortcuts
 
-- `⌘O` - Open file picker
-- `⌘C` - Copy Markdown
-- `⌘S` - Save Markdown
-- `⌘N` - New document
+| Shortcut | Action |
+|----------|--------|
+| `⌘O` | Open file picker |
+| `⌘C` | Copy Markdown |
+| `⌘S` | Save Markdown |
+| `⌘N` | New document |
 
-## 🎨 Design
 
-MacItDown follows Apple's Liquid Glass design language with:
+## 🎨 Design Philosophy
 
-- **Continuous corner radius** (28pt) for modern aesthetics
-- **Ultra-thin materials** for depth and hierarchy
-- **Spring animations** (0.35s duration, 0.1 bounce) for smooth interactions
-- **Symbol effects** and micro-interactions
-- **Adaptive layouts** that scale beautifully
-- **Accessibility-first** color schemes and contrast
+MacItDown embodies Apple's Liquid Glass design language with meticulous attention to detail:
+
+- **Continuous corner radius** (28pt) for modern, approachable aesthetics
+- **Ultra-thin materials** with depth and visual hierarchy
+- **Spring animations** (0.35s duration, 0.1 bounce) for delightful interactions
+- **Symbol effects** and micro-interactions for visual feedback
+- **Adaptive layouts** that scale beautifully across display sizes
+- **Accessibility-first** color schemes with excellent contrast ratios
+- **Haptic feedback** for tactile confirmation
+
 
 ## 🏗️ Architecture
 
-- **SwiftUI** for declarative UI
+```
+MacItDown/
+├── Sources/
+│   ├── MacItDown/          # Main app target
+│   │   ├── App.swift       # App entry point & config
+│   │   ├── ContentView.swift # Main UI container
+│   │   ├── DropView.swift  # Drag & drop handler
+│   │   ├── FileConverter.swift # Document conversion logic
+│   │   ├── MarkdownView.swift # Markdown preview & editor
+│   │   └── ThemeManager.swift # Theme system
+│   └── MarkItDownApp/      # Legacy app target
+├── Resources/
+│   └── AppIcon.appiconset/ # App icons (all sizes)
+└── .github/images/         # GitHub docs & screenshots
+```
+
+### Key Technologies
+
+- **SwiftUI** for declarative, reactive UI
 - **AppKit integration** for native macOS features
-- **Bundled Python environment** for MarkItDown
-- **Async/await** for smooth file processing
-- **@AppStorage** for theme persistence
-- **Uniform Type Identifiers** for file type detection
+- **Bundled Python environment** for MarkItDown conversion
+- **Async/await** for non-blocking file processing
+- **@AppStorage** for persistent theme preferences
+- **Uniform Type Identifiers** for robust file type detection
+
+
+## � Troubleshooting
+
+### Common Issues
+
+**"Python not found" error**
+- Ensure `python3` is installed: `which python3`
+- Run: `source python-env/bin/activate`
+
+**Build fails with Swift version error**
+- Update Xcode: `xcode-select --install`
+- Check version: `swift --version` (should be 6.0+)
+
+**App won't launch after build**
+- Clear build cache: `rm -rf .build`
+- Rebuild: `./build.sh`
+
+**Conversion is slow**
+- Large files (100MB+) may take time depending on format
+- PDF files with many images take longer to process
+
+## ✅ Requirements Met
+
+- [x] SwiftUI modern UI framework
+- [x] Liquid Glass design aesthetic
+- [x] Bundled Python environment
+- [x] Multi-format document support
+- [x] macOS 15+ support
+- [x] Accessibility standards
+
+## 📚 Documentation
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
+- [Swift Best Practices](https://www.swift.org/documentation/)
+- [MarkItDown Documentation](https://github.com/microsoft/markitdown)
 
 ## 📄 License
 
-This project is licensed under the MIT License. Based on [Microsoft's MarkItDown](https://github.com/microsoft/markitdown) © Microsoft Corporation.
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+Built on [Microsoft's MarkItDown](https://github.com/microsoft/markitdown) © Microsoft Corporation.
 
-Contributions welcome! Please ensure code follows Swift 6.0 best practices and maintains the Liquid Glass design aesthetic.
+---
 
-## 📧 Contact
+<div align="center">
+  Made with ❤️ in Swift
+  <br>
+  © 2026 Oliver Bagley.
+</div>
 
-[oliverbagley.com](https://www.oliverbagley.com) · 2026

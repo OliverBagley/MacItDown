@@ -59,22 +59,10 @@ extension ContentView {
 
             // App identity
             HStack(spacing: 12) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(
-                            LinearGradient(
-                                colors: [.blue, .indigo],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: 34, height: 34)
-                        .shadow(color: .blue.opacity(0.3), radius: 6, y: 3)
-
-                    Image(systemName: "sparkles.rectangle.stack")
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(.white)
-                }
+                Image(nsImage: NSApplication.shared.applicationIconImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 44, height: 44)
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("MacItDown")
