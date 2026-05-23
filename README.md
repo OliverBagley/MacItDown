@@ -16,7 +16,7 @@
 ## 📸 Screenshot
 
 <div align="center">
-  <img src=".github/images/screenshot-main.avif" alt="MacItDown App Screenshot" width="600">
+  <img src=".github/images/MacItDown_header.avif" alt="MacItDown App Screenshot" width="600">
 </div>
 
 ## ✨ Features
